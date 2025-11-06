@@ -56,7 +56,7 @@ function startGame(){
 					firstUser=false;
 					message_container.textContent=`${sec_player}, you're up`
 				}else{
-					item.innerText='0';
+					item.innerText='o';
 					item.style.color="black";
 					firstUser=true;
 					message_container.textContent=`${first_player}, you're up`
