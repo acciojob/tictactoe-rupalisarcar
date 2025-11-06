@@ -46,10 +46,7 @@ function startGame(){
 			console.log('item,', item)
 			item.addEventListener('click',function(){
 				if(item.innerText!=='') return
-				if(checkWinner()){
-					message_container.textContent=firstUser==true?`Player2 congratulations you won!`: `Player1 congratulations you won!`;
-					return;
-				}
+				
 				if(firstUser){
 					item.innerText='x';
 					item.style.color="black";
@@ -60,6 +57,10 @@ function startGame(){
 					item.style.color="black";
 					firstUser=true;
 					message_container.textContent=`${first_player}, you're up`
+				}
+				if(checkWinner()){
+					message_container.textContent=firstUser==true?`Player2 congratulations you won!`: `Player1 congratulations you won!`;
+					return;
 				}
 			})
 		})
