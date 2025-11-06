@@ -11,3 +11,20 @@ h1{
 .player{
 	margin:10px;
 }
+.message{
+	text-align:center;
+	font-size:12px;
+}
+#game-container{
+	display:grid;
+	width:80%;
+	margin:20px auto;
+	border:1px solid black;
+}
+.grid_item{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	background-color: #ffc0cb;
+    border: 1px solid black;
+}
