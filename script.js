@@ -6,8 +6,8 @@ gamePage.style.display="none";
 let firstUser = true;
 	
 function startGame(){
-	const first_player = document.getElementById("player1").value.trim();
-	const sec_player = document.getElementById("player2").value.trim();
+	const first_player = document.getElementById("player-1").value.trim();
+	const sec_player = document.getElementById("player-2").value.trim();
 	if(first_player!=="" && sec_player !==''){
 		// Hide first page and show game page
 		firstPage.style.display="none";
