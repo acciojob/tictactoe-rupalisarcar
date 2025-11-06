@@ -46,6 +46,10 @@ function startGame(){
 			console.log('item,', item)
 			item.addEventListener('click',function(){
 				if(item.innerText!=='') return
+				if(checkWinner()){
+					message_container.textContent=firstUser==true?`${first_player} congratulations you won`: `${sec_player} congratulations you won`;
+					return;
+				}
 				if(firstUser){
 					item.innerText='X';
 					item.style.color="black";
@@ -61,5 +65,21 @@ function startGame(){
 		})
 		
 	}
+}
+
+function checkWinner(){
+	const grid_item = Array.from(document.querySelectorAll('.grid_item'));
+	const value = grid_item.map((c)=>c.textContent);
+	const winPattern=[
+		[0,1,2],
+		[3,4,5],
+		[6,7,8],
+		[0,3,6],
+		[1,4,7],
+		[2,5,8],
+		[0,4,8],
+		[2,4,6]
+	]
+	return winPattern.some(([a,b,c])=> value[a] && value[a] === value[b] && value[a]===value[c])
 }
 submit.addEventListener("click", startGame)
