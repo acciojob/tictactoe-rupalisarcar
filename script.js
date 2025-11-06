@@ -1,5 +1,5 @@
 //your JS code here. If required.
-const start = document.getElementById("start");
+const submit = document.getElementById("submit");
 const firstPage = document.getElementById("firstPage");
 const gamePage = document.getElementById("gamePage");
 gamePage.style.display="none";
@@ -16,8 +16,9 @@ function startGame(){
 		message_container.textContent=`${first_player}, you're up`;		
 		gamePage.appendChild(p)
 		const game_container = document.createElement('div');
-		
-		
+		game_container.id="game-container";
+		const row=3;
+		const col = 3;
 	}
 }
-start.addEventListener("click", startGame)
+submit.addEventListener("click", startGame)
