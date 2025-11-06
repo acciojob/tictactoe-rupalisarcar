@@ -9,10 +9,10 @@ function startGame(){
 	if(first_player!=="" && sec_player !==''){
 		firstPage.style.display="none";
 		gamePage.style.display="block";
-		const p = document.createElement('p')
-		p.textContent=`${first_player}, you're up`;
-		
-		gamepage.appendChild(p)
+		const messageDiv = document.createElement('div')
+		messageDiv.classList.add('message')
+		p.textContent=`${first_player}, you're up`;		
+		gamePage.appendChild(p)
 		
 	}
 }
