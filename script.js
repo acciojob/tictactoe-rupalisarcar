@@ -47,7 +47,7 @@ function startGame(){
 			item.addEventListener('click',function(){
 				if(item.innerText!=='') return
 				if(checkWinner()){
-					message_container.textContent=firstUser==true?`Player1 congratulations you won!`: `Player2 congratulations you won!`;
+					message_container.textContent=firstUser==true?`Player2 congratulations you won!`: `Player1 congratulations you won!`;
 					return;
 				}
 				if(firstUser){
