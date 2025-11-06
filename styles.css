@@ -1,1 +1,13 @@
 /*  your css code here. If applicable */
+h1{
+	text-align:center;
+	font-family:'Courier New', Courier, monospace;
+	font-style:"italic";
+	font-weight:900;
+}
+#firstPage{
+	text-align:center;	
+}
+.player{
+	margin:10px;
+}
